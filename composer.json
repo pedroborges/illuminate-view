@@ -23,6 +23,9 @@
         "symfony/debug": "^4.1"
     },
     "autoload": {
+        "files": [
+            "helpers.php"
+        ],
         "psr-4": {
             "Illuminate\\View\\": ""
         }

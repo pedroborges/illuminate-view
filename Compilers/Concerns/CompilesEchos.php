@@ -86,7 +86,7 @@ trait CompilesEchos
         $callback = function ($matches) {
             $whitespace = empty($matches[3]) ? '' : $matches[3].$matches[3];
 
-            return $matches[1] ? $matches[0] : "<?php echo e({$matches[2]}); ?>{$whitespace}";
+            return $matches[1] ? $matches[0] : "<?php echo illuminate_e({$matches[2]}); ?>{$whitespace}";
         };
 
         return preg_replace_callback($pattern, $callback, $value);
